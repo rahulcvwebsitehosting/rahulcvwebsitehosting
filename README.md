@@ -1,33 +1,103 @@
+````markdown
+<div align="center">
+
 # Rahul Shyam
 
-I build software that sits at the intersection of civil engineering and AI. Most of my work is React + TypeScript + Gemini API, deployed on Vercel.
+**Civil Engineer · Full-Stack Developer · AI Builder**
 
-I started with client websites and college tools. Now I'm building browser agents, construction AI, and real-time multiplayer games.
+[![Portfolio](https://img.shields.io/badge/Portfolio-rahulshyam--portfolio.vercel.app-6366F1?style=for-the-badge&logo=vercel&logoColor=white)](https://rahulshyam-portfolio.vercel.app/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-rahulshyamcivil-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/rahulshyamcivil)
+[![X](https://img.shields.io/badge/X-@RahulShyamCV-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/RahulShyamCV)
+[![Threads](https://img.shields.io/badge/Threads-@rahulcvjps-000000?style=for-the-badge&logo=threads&logoColor=white)](https://threads.com/@rahulcvjps)
 
-## Projects I Actually Maintain
+*I build software at the intersection of civil engineering and AI. 40+ projects shipped on Vercel.*
 
-| Project | What it is | Stack |
-|---|---|---|
-| [AutoBOM](https://github.com/rahulcvwebsitehosting/AutoBOM) | Upload a construction drawing, get a full Bill of Materials in 5 minutes. Built for the Build with Gemini XPRIZE. | React, TypeScript, Gemini Vision |
-| [wayfinder](https://github.com/rahulcvwebsitehosting/wayfinder) | Desktop browser agent that connects to local LLMs (Ollama, LM Studio) via CDP. MCP server, visual workflows, persistent memory. | TypeScript, Chromium |
-| [WebNav](https://github.com/rahulcvwebsitehosting/WebNav) | Chrome Extension that turns local LLMs into autonomous browsing agents. 14 dev tools, risk-tier safety model, zero cloud. | Vanilla JS, Manifest V3 |
-| [Civilog](https://github.com/rahulcvwebsitehosting/Civilog) | On-Duty management system for my entire college. RBAC, live tracking, QR verification, Excel export. | React, Supabase |
-| [GREnius](https://github.com/rahulcvwebsitehosting/GREnius) | GRE prep with vocab, quant, and cognitive mini-games. Built-in chess engine with Negamax + Alpha-Beta. | React, TypeScript |
-| [CivilVision AI](https://github.com/rahulcvwebsitehosting/CivilVision-Ai) | Civil engineering AI helpbook — hackathon project. | React, Gemini API |
+</div>
 
-## Live Demos
-- [AutoBOM](https://autobomprj.vercel.app/)
-- [Civilog](https://civilog.vercel.app/)
-- [GREnius](https://grenius.vercel.app/)
+---
 
-## Experience
-- **Site Engineering Intern** — Tata Projects Limited, Chennai Underground Metro
-- **BIM Intern** — Pinnacle Future Build, Madurai (Revit → hostel design project)
+## ⚡ What I Build
 
-## Links
-- [Portfolio](https://rahulshyam-portfolio.vercel.app/)
-- [LinkedIn](https://linkedin.com/in/rahulshyamcivil)
-- [X](https://x.com/RahulShyamCV)
-- [Threads](https://threads.com/@rahulcvjps)
+| Domain | Projects |
+|:---|:---|
+| 🏗️ **Construction Tech** | AutoBOM — AI BOM generator from drawings |
+| 🌐 **Browser Agents** | wayfinder (desktop) · WebNav (Chrome extension) |
+| 🎓 **Education / College** | Civilog — OD management for 2000+ students |
+| 🧠 **Cognitive / Games** | GREnius — GRE prep + chess engine + mini-games |
+| 🤖 **Civil AI** | CivilVision AI — hackathon-winning helpbook |
 
-Based in Chennai. BE Civil Engineering @ ESEC.
+---
+
+## 🚀 Featured Projects
+
+<div align="center">
+
+| Project | Live | Stack | What It Does |
+|:---|:---:|:---|:---|
+| **AutoBOM** | [🔗](https://autobomprj.vercel.app/) | React · TypeScript · Gemini Vision | AI BOM from construction drawings |
+| **wayfinder** | — | TypeScript · Chromium CDP · MCP | Desktop browser agent with local LLM support |
+| **WebNav** | — | Vanilla JavaScript · Manifest V3 | Chrome extension for autonomous browsing |
+| **Civilog** | [🔗](https://civilog.vercel.app/) | React · Supabase · RBAC | College-wide OD management platform |
+| **GREnius** | [🔗](https://gr-enius.vercel.app/) | React · TypeScript · Chess Engine | GRE preparation + cognitive games |
+| **CivilVision AI** | — | React · Gemini API | AI-powered civil engineering helpbook |
+
+</div>
+
+---
+
+## 🧠 Architecture: How I Think
+
+```mermaid
+graph LR
+    A[Real Problem] --> B[Sketch Solution]
+    B --> C[Build MVP in React + TypeScript]
+    C --> D[Add AI Layer — Gemini / MediaPipe]
+    D --> E[Deploy on Vercel]
+    E --> F[Iterate with Real Users]
+    F --> G[Ship]
+
+    style A fill:#f5a623,stroke:#333,stroke-width:2px,color:#000
+    style G fill:#22c55e,stroke:#333,stroke-width:2px,color:#fff
+```
+
+---
+
+## 🛠️ Tech I Actually Use
+
+```text
+React        ██████████████████████████████
+TypeScript   ██████████████████████████████
+Tailwind CSS ██████████████████████████████
+Gemini API   ██████████████████████████████
+Supabase     ████████████████████████████
+Node.js      ██████████████████████████
+Three.js     ██████████████████
+```
+
+---
+
+## 📍 Experience
+
+| Role | Organization | When |
+|:---|:---|:---|
+| Site Engineering Intern | Tata Projects — Chennai Underground Metro | 2024 |
+| BIM Intern | Pinnacle Future Build, Madurai | Jun–Jul 2026 |
+
+---
+
+## 📫 Reach Me
+
+- **Portfolio:** https://rahulshyam-portfolio.vercel.app/
+- **LinkedIn:** https://linkedin.com/in/rahulshyamcivil
+- **X:** https://x.com/RahulShyamCV
+- **Threads:** https://threads.com/@rahulcvjps
+
+---
+
+<div align="center">
+
+**Chennai, India 🇮🇳**  
+**B.E. Civil Engineering @ ESEC**
+
+</div>
+````
