@@ -18,7 +18,7 @@ I started with client websites and college tools. Now I'm building browser agent
 ## Live Demos
 - [AutoBOM](https://autobomprj.vercel.app/)
 - [Civilog](https://civilog.vercel.app/)
-- [GREnius](https://gr-enius.vercel.app/)
+- [GREnius](https://grenius.vercel.app/)
 
 ## Experience
 - **Site Engineering Intern** — Tata Projects Limited, Chennai Underground Metro
