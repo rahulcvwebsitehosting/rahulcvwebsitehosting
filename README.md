@@ -1,6 +1,6 @@
 <!--
   ╔══════════════════════════════════════════════════════════════╗
-  ║                    RAHULOS v3.6 AI                           ║
+  ║                    RAHULOS v3.7 AI                           ║
   ║                    AI Operating System                        ║
   ║                    github.com/rahulcvwebsitehosting            ║
   ╚══════════════════════════════════════════════════════════════╝
@@ -10,17 +10,17 @@
 <br>
 <br>
 
-<!-- ═══════════ BOOT SEQUENCE — KERNEL INIT ═══════════ -->
+<!-- ═══════════ BOOT SEQUENCE ═══════════ -->
 
 ```
-RahulOS 3.6.0-ai (rahul-cv-01) │ tty1
+RahulOS 3.7.0-ai (rahul-cv-01) │ tty1
 
 [    0.000000] Booting RahulOS AI kernel...
-[    0.184201] Initializing AI inference subsystem
-[    0.184212] Initializing vision processing unit
-[    0.184223] Initializing multi-model router
-[    0.302831] Mounting root filesystem...
-[    0.384120] Mount-cache hash table entries: 2048 (order: 1)
+[    0.421913] Initializing AI inference subsystem
+[    0.422008] Initializing vision processing unit
+[    0.422105] Initializing multi-model router
+[    0.813042] Mounting root filesystem...
+[    1.104211] Mount-cache hash table entries: 2048 (order: 1)
 
 ┌──────────────────────────────────────────────────────────┐
 │                                                          │
@@ -40,27 +40,24 @@ RahulOS 3.6.0-ai (rahul-cv-01) │ tty1
 │                                                          │
 └──────────────────────────────────────────────────────────┘
 
-[    0.604182] ACPI: RSDP 0x00000000000F0000 000024 (v02 RAHULOS-AI)
-[    0.604221] ACPI: XSDT 0x00000000000F0080 000064 (v01 RAHULOS-AI)
-[    0.842103] Initramfs unpacking: Initializing AI userland...
-[    1.000000] Freeing initrd memory: 32768K
+[    1.315290] PCI: Using ACPI for IRQ routing
+[    1.315312] PCI: MMCONFIG at 0xe0000000 reserved
+[    1.841006] Initramfs unpacking: Initializing AI userland...
+[    2.101483] Freeing initrd memory: 32768K
 
-─── AI SYSTEMD INITIALIZATION ────────────────────────────
+─── SERVICE MANAGER INIT ────────────────────────────────
 
-[  OK  ] Started gemini-router.service          — Multi-model orchestration
-[  OK  ] Started vision-engine.service           — Computer Vision Pipeline
-[  OK  ] Started insightface-runtime.service     — Face Recognition Engine
-[  OK  ] Started llm-inference.service           — LLM Inference Runtime
-[  OK  ] Listening on :3000 (api-gateway.socket) — Next.js API Routes
-[  OK  ] Listening on :5173 (vite-dev.socket)    — React Dev Server
-[  OK  ] Started firebase-bridge.service         — Firebase Backend
-[  OK  ] Started cloud-run-deploy.service        — Google Cloud Run
-[  OK  ] Started vercel-edge.service             — Vercel Edge Functions
-[  OK  ] Started typescript-compiler.service     — TS Compiler
-[  OK  ] Started tailwind-engine.service         — Tailwind CSS Engine
+[  OK  ] Started gemini-adapter.service          — Multi-model routing
+[  OK  ] Started vision-pipeline.service          — Computer Vision
+[  OK  ] Started insightface-runtime.service      — Face Recognition
+[  OK  ] Started ollama-bridge.service            — Local LLM runtime
+[  OK  ] Started api-gateway.socket               — Next.js API routes
+[  OK  ] Started dev-server.socket                — Vite dev server
+[  OK  ] Started firebase-connector.service       — Firebase backend
+[  OK  ] Started cloud-run-agent.service          — GCP deployment
+[  OK  ] Started vercel-edge-agent.service        — Edge delivery
 
-[  OK  ] Reached target ai-platform.target
-[  OK  ] Reached target production-deploy.target
+[  OK  ] Reached target session.target
 
 ```
 
@@ -68,7 +65,7 @@ RahulOS 3.6.0-ai (rahul-cv-01) │ tty1
 <br>
 <br>
 
-<!-- ═══════════ AUTHENTICATION — USER LOGIN ═══════════ -->
+<!-- ═══════════ LOGIN ═══════════ -->
 
 ```
 rahul@rahulos login: rahul
@@ -80,24 +77,26 @@ Authenticating...
 │                                                          │
 │   User: rahul                                            │
 │   UID: 1000    GID: 1000                                │
-│   Groups: ai-engineers, builders, civil-engineers        │
+│   Groups: ai, builders, civil-engineering                │
 │   Home: /home/rahul                                      │
-│   Shell: powershell                                      │
-│   OS: Windows 11 Pro                                     │
-│   Editor: VS Code                                        │
-│   Cloud: Google Cloud                                    │
-│   Deploy: Vercel                                         │
+│   Shell: /bin/zsh                                        │
 │                                                          │
-│   ┌──── LOADING AI COMPONENTS ──────────────────────┐   │
+│   ┌── ENVIRONMENT ──────────────────────────────────┐   │
 │   │                                                  │   │
-│   │   ✓  nextjs.dll         — Frontend runtime       │   │
-│   │   ✓  gemini.dll         — AI inference client    │   │
-│   │   ✓  vision.dll         — Computer vision        │   │
-│   │   ✓  insightface.dll    — Face recognition       │   │
-│   │   ✓  prompt-router.dll  — Model router           │   │
-│   │   ✓  cloudrun.dll       — Cloud deployment       │   │
-│   │   ✓  firebase.dll       — Backend services       │   │
-│   │   ✓  vercel.dll         — Edge delivery          │   │
+│   │  OS        Windows 11 Pro                        │   │
+│   │  Editor    VS Code                               │   │
+│   │  Terminal  Windows Terminal                      │   │
+│   │  Cloud     Google Cloud                          │   │
+│   │  Deploy    Vercel + Cloud Run                    │   │
+│   │                                                  │   │
+│   └──────────────────────────────────────────────────┘   │
+│                                                          │
+│   ┌── LOADING SESSION ─────────────────────────────┐    │
+│   │                                                  │   │
+│   │  Loading dotfiles             [############]  ✓   │   │
+│   │  Initializing shell plugins   [############]  ✓   │   │
+│   │  Connecting cloud services    [############]  ✓   │   │
+│   │  Warming AI runtimes          [############]  ✓   │   │
 │   │                                                  │   │
 │   └──────────────────────────────────────────────────┘   │
 │                                                          │
@@ -118,19 +117,18 @@ Login successful. Welcome, rahul.
 <br>
 <br>
 
-<!-- ═══════════ DESKTOP — AI TERMINAL IDLE ═══════════ -->
+<!-- ═══════════ DESKTOP ═══════════ -->
 
 ```
-╭─────────────────────── RahulOS v3.6 AI ──────────────────────────╮
+╭─────────────────────── RahulOS v3.7 AI ──────────────────────────╮
 │                                                                  │
-│   [ Desktop ]  [ AI Router ]  [ Projects ]  [ Models ]  [ Sys ]  │
+│   [ Desktop ]  [ Engine ]  [ Services ]  [ Modules ]  [ Log ]    │
 │                                                                  │
 │   ┌──────────────────────────────────────────────────────────┐   │
 │   │                                                          │   │
 │   │       AI OPERATING SYSTEM READY                          │   │
 │   │                                                          │   │
-│   │       rahul@rahulos:~$                                   │   │
-│   │       █                                                  │   │
+│   │       rahul@rahulos:~$ _                                 │   │
 │   │                                                          │   │
 │   └──────────────────────────────────────────────────────────┘   │
 │                                                                  │
@@ -143,20 +141,17 @@ Login successful. Welcome, rahul.
 ```
 rahul@rahulos:~$ ls -la /home/rahul/
 
-total 96
-drwxr-xr-x  14 rahul rahul  4096 Jul  9 00:42 .
+total 84
+drwxr-xr-x  12 rahul rahul  4096 Jul  9 00:42 .
 drwxr-xr-x   3 root  root    4096 Jul  1 00:00 ..
 drwxr-xr-x   7 rahul rahul  4096 Jul  9 00:42 projects/
-drwxr-xr-x   5 rahul rahul  4096 Jul  9 00:42 ai-models/
-drwxr-xr-x   4 rahul rahul  4096 Jul  9 00:42 telemetry/
-drwxr-xr-x   3 rahul rahul  4096 Jul  9 00:42 experience/
+drwxr-xr-x   4 rahul rahul  4096 Jul  9 00:42 services/
+drwxr-xr-x   2 rahul rahul  4096 Jul  9 00:42 experience/
 drwxr-xr-x   2 rahul rahul  4096 Jul  9 00:42 roadmap/
--rw-r--r--   1 rahul rahul  2048 Jul  9 00:42 .env.local
 -rw-r--r--   1 rahul rahul   512 Jul  9 00:42 about.txt
 -rw-r--r--   1 rahul rahul  1024 Jul  9 00:42 now.txt
 -rw-r--r--   1 rahul rahul   256 Jul  9 00:42 contact.txt
 drwx------   2 rahul rahul  4096 Jul  9 00:42 .config/
-drwx------   2 rahul rahul  4096 Jul  9 00:42 .secrets/
 lrwxrwxrwx   1 rahul rahul    39 Jul  9 00:42 rahul.live -> https://rahulshyam-portfolio.vercel.app/
 
 ```
@@ -165,113 +160,41 @@ lrwxrwxrwx   1 rahul rahul    39 Jul  9 00:42 rahul.live -> https://rahulshyam-p
 <br>
 <br>
 
-<!-- ═══════════ AI ROUTER — Model Switchboard Panel ═══════════ -->
+<!-- ═══════════ AI ENGINE PANEL ═══════════ -->
 
 ```
-rahul@rahulos:~$ rahul-ai route --status
-
-╔════════════════════ AI MODEL ROUTER ═════════════════════╗
-║                                                          ║
-║  ┌──────────────────────────────────────────────────┐    ║
-║  │  PID   MODEL              STATUS      ENGINE     │    ║
-║  │  ────────────────────────────────────────────── │    ║
-║  │  1142  Gemini 2.5 Pro     ● ONLINE    Primary   │    ║
-║  │  1146  Gemini Flash        ● ONLINE    Vision    │    ║
-║  │  1184  Claude Sonnet       ○ STANDBY   Fallback │    ║
-║  │  1187  DeepSeek Coder      ○ STANDBY   Fallback │    ║
-║  │  1242  OpenAI GPT          ○ STANDBY   Fallback │    ║
-║  │  1281  Ollama CodeLlama    ● ACTIVE    Local    │    ║
-║  │  1329  NVIDIA NIM          ● ACTIVE    On-prem  │    ║
-║  │                                                  │    ║
-║  │  ────────────────────────────────────────────── │    ║
-║  │                                                  │    ║
-║  │  Router Mode          : Auto-failover            │    ║
-║  │  Primary Route        : Gemini 2.5 Pro          │    ║
-║  │  Fallback Chain       : Claude → DeepSeek → GPT │    ║
-║  │  Failovers Today      : 0                       │    ║
-║  │  Response Time (p95)  : 1.2s                    │    ║
-║  │                                                  │    ║
-║  └──────────────────────────────────────────────────┘    ║
-║                                                          ║
-╚═══════════════════════════════════════════════════════════╝
-
-```
-
-<br>
-<br>
-<br>
-
-<!-- ═══════════ INFERENCE ENGINE — Subsystem Dashboard ═══════════ -->
-
-```
-rahul@rahulos:~$ rahul-ai engine --status
-
-╔══════════════════ INFERENCE ENGINE ──────── ONLINE ──────╗
-║                                                          ║
-║  ┌──────────────────────┐ ┌──────────────────────────┐   ║
-║  │ Prompt Routing        │ │ Vision Analysis          │   ║
-║  │ ● ACTIVE              │ │ ● RUNNING                │   ║
-║  │ Model: Gemini 2.5     │ │ Engine: InsightFace      │   ║
-║  │ Throughput: 142 req/s │ │ Queue: 3 pending         │   ║
-║  └──────────────────────┘ └──────────────────────────┘   ║
-║                                                          ║
-║  ┌──────────────────────┐ ┌──────────────────────────┐   ║
-║  │ Identity Memory       │ │ Response Streaming       │   ║
-║  │ ● READY               │ │ ● ONLINE                 │   ║
-║  │ Faces Enrolled: 1.2k  │ │ Latency: 180ms           │   ║
-║  │ Accuracy: 99.2%       │ │ Format: SSE              │   ║
-║  └──────────────────────┘ └──────────────────────────┘   ║
-║                                                          ║
-║  ┌──────────────────────┐ ┌──────────────────────────┐   ║
-║  │ Fallback Engine       │ │ Embedding Service        │   ║
-║  │ ● READY               │ │ ● ACTIVE                 │   ║
-║  │ Chain: Claude → GPT   │ │ Dim: 768, Model: text    │   ║
-║  │ Last Failover: never  │ │ Index: 4.2k vectors      │   ║
-║  └──────────────────────┘ └──────────────────────────┘   ║
-║                                                          ║
-╚═══════════════════════════════════════════════════════════╝
-
-```
-
-<br>
-<br>
-<br>
-
-<!-- ═══════════ AI SYSTEM DIAGNOSTIC — Multi-panel Telemetry ═══════════ -->
-
-```
-rahul@rahulos:~$ rahul-ai diag
+rahul@rahulos:~$ rahul-ai status
 
 ╔══════════════════════════════════════════════════════════════╗
 ║                                                              ║
-║  ┌────────────────────────────────────────────────────────┐  ║
-║  │                   SYSTEM DIAGNOSTIC                     │  ║
-║  │                                                        │  ║
-║  │  STATUS        : ALL SYSTEMS OPERATIONAL               │  ║
-║  │  MODE          : AI PRODUCT ENGINEERING                │  ║
-║  │  UPTIME        : 4 years, 2 months                     │  ║
-║  │  CURRENT FOCUS : Building LooksMax AI                  │  ║
-║  │                                                        │  ║
-║  └────────────────────────────────────────────────────────┘  ║
+║  ── ROUTING ───────────────────────────────────────────────  ║
+║                                                              ║
+║  MODEL              STATUS     USE CASE         LATENCY      ║
+║  ─────────────────────────────────────────────────────────── ║
+║                                                              ║
+║  Gemini 2.5 Pro     ● ONLINE   Vision, Reasoning  820ms     ║
+║  Gemini Flash       ● ONLINE   Vision only        340ms     ║
+║  Claude Sonnet      ○ STANDBY  Reasoning fallback  —        ║
+║  DeepSeek Coder     ○ STANDBY  Code generation     —        ║
+║  Ollama CodeLlama   ● ACTIVE   Local inference   1.2s      ║
+║                                                              ║
+║  Fallback chain: Gemini 2.5 Pro → Claude → DeepSeek         ║
+║  Auto-failover: enabled    Failovers today: 0              ║
+║                                                              ║
+║  ── SUBSYSTEMS ────────────────────────────────────────────  ║
 ║                                                              ║
 ║  ┌──────────────────────┐ ┌──────────────────────────────┐   ║
-║  │ INFERENCE ENGINES    │ │ CLOUD SERVICES               │   ║
-║  │                      │ │                              │   ║
-║  │ Gemini    ● ONLINE   │ │ Cloud Run   ● CONNECTED      │   ║
-║  │ Insight   ● ACTIVE   │ │ Firebase    ● ONLINE         │   ║
-║  │ Ollama    ● ACTIVE   │ │ Vercel      ● ONLINE         │   ║
-║  │ NVIDIA    ● ACTIVE   │ │ Supabase    ● CONNECTED      │   ║
-║  │                      │ │                              │   ║
+║  │ Prompt Routing        │ │ Vision Analysis              │   ║
+║  │ ● ACTIVE              │ │ ● RUNNING                    │   ║
+║  │ Model: Gemini 2.5     │ │ Pipeline: InsightFace        │   ║
+║  │ Throughput: 142 req/s │ │ Queue depth: 3               │   ║
 ║  └──────────────────────┘ └──────────────────────────────┘   ║
 ║                                                              ║
 ║  ┌──────────────────────┐ ┌──────────────────────────────┐   ║
-║  │ AI PROJECTS          │ │ SYSTEM LOGS                  │   ║
-║  │                      │ │                              │   ║
-║  │ Active    ● 5        │ │ [00:42] Session initialized  │   ║
-║  │ Planning  ○ 4        │ │ [00:42] All modules loaded   │   ║
-║  │ Vision    ● ONLINE   │ │ [00:42] Router healthy       │   ║
-║  │ Face      ● ACTIVE   │ │ [00:42] Engine ready         │   ║
-║  │                      │ │                              │   ║
+║  │ Face Memory           │ │ Embedding Service            │   ║
+║  │ ● READY               │ │ ● ACTIVE                     │   ║
+║  │ Faces registered: 240 │ │ Dimension: 512               │   ║
+║  │ Match accuracy: 99.8% │ │ Vector index: 4.2K           │   ║
 ║  └──────────────────────┘ └──────────────────────────────┘   ║
 ║                                                              ║
 ╚═══════════════════════════════════════════════════════════════╝
@@ -282,23 +205,23 @@ rahul@rahulos:~$ rahul-ai diag
 <br>
 <br>
 
-<!-- ═══════════ EXPERIENCE — REAL INTERNSHIPS ═══════════ -->
+<!-- ═══════════ EXPERIENCE ═══════════ -->
 
 ```
-rahul@rahulos:~$ cat /home/rahul/experience/experience.txt
+rahul@rahulos:~$ cat /home/rahul/experience/work.txt
 
 ┌──────────────────────────────────────────────────────────┐
 │                                                          │
-│   ROLE             ORGANIZATION              PERIOD      │
-│   ──────────────────────────────────────────────────     │
+│   ROLE               ORGANIZATION              PERIOD    │
+│   ────────────────────────────────────────────────────   │
 │                                                          │
-│   Site Engineering  Tata Projects            2024        │
-│   Intern            Chennai Underground Metro            │
+│   Site Engineering   Tata Projects             2024      │
+│   Intern             Chennai Underground Metro           │
 │                                                          │
-│   BIM Intern        Pinnacle Future Build     Jun–Jul    │
-│                     Madurai                   2026        │
+│   BIM Intern         Pinnacle Future Build     Jun–Jul   │
+│                      Madurai                   2026      │
 │                                                          │
-│   Domain: Civil Engineering + AI + Software              │
+│   Domain: Civil Engineering · AI · Software              │
 │                                                          │
 └──────────────────────────────────────────────────────────┘
 
@@ -308,110 +231,32 @@ rahul@rahulos:~$ cat /home/rahul/experience/experience.txt
 <br>
 <br>
 
-<!-- ═══════════ AI MODELS — LOADED INFERENCE ENGINES ═══════════ -->
+<!-- ═══════════ SYSTEM STATUS ═══════════ -->
 
 ```
-rahul@rahulos:~$ lsmod | grep ai
-
-Module                  Size   Used by    Description
-─────────────────────────────────────────────────────
-gemini_router           32768   5          Multi-model orchestration
-vision_pipeline         28672   4          Computer Vision + Face Recognition
-insightface_engine      24576   3          Face detection / embedding / compare
-llm_inference           20480   4          LLM prompt routing + response parsing
-ollama_runtime          16384   2          Local LLM inference engine
-firebase_bridge         20480   3          Firestore + Auth + Storage
-cloud_run_deploy        12288   2          Google Cloud Run CI/CD
-vercel_edge              8192   5          Edge Functions + ISR
-
-─── 8 modules loaded ─────────────────────────────────
-
-```
-
-<br>
-
-```
-rahul@rahulos:~$ modinfo gemini_router
-
-filename:       /lib/modules/3.6.0-ai/kernel/gemini_router.ko
-description:    Multi-model AI orchestration — vision, text, embeddings
-author:         Rahul
-license:        Production-grade
-depends:        vision_pipeline, insightface_engine, llm_inference
-vermagic:       3.6.0-ai SMP mod_unload
-
-```
-
-<br>
-<br>
-<br>
-
-<!-- ═══════════ DEPLOYMENT CENTER — Build & Deploy Status ═══════════ -->
-
-```
-rahul@rahulos:~$ rahul-ai deploy --status
-
-╔══════════════════ DEPLOYMENT CENTER ═══════════════════╗
-║                                                        ║
-║  ┌─────────────────────────────────────────────────┐   ║
-║  │ DEPLOY TARGET         STATUS       LAST BUILD  │   ║
-║  │ ────────────────────────────────────────────── │   ║
-║  │                                                      │   ║
-║  │ Vercel (Frontend)      ● ONLINE    v3.6.0 ✓  │   ║
-║  │ Cloud Run (Backend)    ● ACTIVE    v3.6.0 ✓  │   ║
-║  │ Firebase (Auth + DB)   ● ONLINE    — sync     │   ║
-║  │ GitHub Actions         ● PASSING   #128 ✓     │   ║
-║  │                                                      │   ║
-║  └─────────────────────────────────────────────────┘   ║
-║                                                        ║
-║  ──────────────── BUILD HISTORY ────────────────────    ║
-║                                                        ║
-║  [22:14:03] ✓ Build #128 — main — v3.6.0              ║
-║  [22:14:01]  → Cloud Run: Deploying revision r-128     ║
-║  [22:13:58]  → Vercel: Deploying production ✓          ║
-║  [21:55:22] ✓ Build #127 — looksmax/pipeline           ║
-║  [21:55:20]  → Gemini Router: Config updated           ║
-║  [21:30:01] ✓ Build #126 — main — InsightFace upgrade  ║
-║  [21:30:00]  → Firebase: Security rules deployed       ║
-║                                                        ║
-╚══════════════════════════════════════════════════════════╝
-
-```
-
-<br>
-<br>
-<br>
-
-<!-- ═══════════ PROJECT SERVICES — Process Table ═══════════ -->
-
-```
-rahul@rahulos:~$ rahul-ai ps
+rahul@rahulos:~$ rahul-ai system
 
 ╔══════════════════════════════════════════════════════════════╗
 ║                                                              ║
-║  PID   SERVICE              STATUS      STACK                ║
-║  ──────────────────────────────────────────────────────────  ║
+║  STATUS    : RUNNING                                         ║
+║  MODE      : AI PRODUCT ENGINEERING                          ║
+║  SESSION   : 0d 0h 12m (since boot)                         ║
+║  FOCUS     : Building LooksMax AI                            ║
 ║                                                              ║
-║  1042  Kernel               ● Running   RahulOS v3.6 AI     ║
-║  1142  Prompt Router        ● Running   Gemini → Multi-LLM  ║
-║  1146  Vision Engine        ● Running   InsightFace + CV    ║
-║  1184  Face Memory          ● Running   Embedding + Compare ║
-║                                                              ║
-║  ──────────────────────────────────────────────────────────  ║
-║                                                              ║
-║  1267  LooksMax AI          ● Running   Next.js · GCP       ║
-║  1198  CivilVision AI       ● Running   React · Gemini      ║
-║  1342  StudySense           ● Running   Next.js · Firebase  ║
-║  1409  TypeArena            ● Running   Next.js · Vercel    ║
-║  1267  AutoBOM              ● Running   React · Supabase    ║
-║                                                              ║
-║  ──────────────────────────────────────────────────────────  ║
-║                                                              ║
-║  1512  FallGuard            ○ Planned   React · CV          ║
-║  1520  Hostel Planner       ○ Planned   React · Node.js     ║
-║  1534  TunnelViz            ○ Planned   Three.js · Express  ║
-║  1548  OSB ETA              ○ Planned   Python · TF         ║
-║  1552  GREnius              ○ Paused    React · TS          ║
+║  ┌─────────────────────────┐ ┌─────────────────────────────┐ ║
+║  │ DEPLOY TARGETS          │ │ RUNNING SERVICES            │ ║
+║  │                         │ │                             │ ║
+║  │ Vercel           ONLINE │ │ Prompt Router      1148 ◉   │ ║
+║  │ Cloud Run        ACTIVE │ │ Vision Engine      1152 ◉   │ ║
+║  │ Firebase         ONLINE │ │ Face Memory         2184 ◉   │ ║
+║  │ GH Actions      PASSING │ │ LooksMax AI         2191 ◉   │ ║
+║  │                         │ │ CivilVision AI      2203 ◉   │ ║
+║  │ ── BUILD HISTORY ──     │ │ StudySense          2230 ◉   │ ║
+║  │ [22:14] Build #128 ✓    │ │ TypeArena           2241 ◉   │ ║
+║  │ [21:55] Build #127 ✓    │ │ AutoBOM             2257 ◉   │ ║
+║  │ [21:30] Build #126 ✓    │ │                     ───     │ ║
+║  │                         │ │ 8 services running         │ ║
+║  └─────────────────────────┘ └─────────────────────────────┘ ║
 ║                                                              ║
 ╚═══════════════════════════════════════════════════════════════╝
 
@@ -421,30 +266,31 @@ rahul@rahulos:~$ rahul-ai ps
 <br>
 <br>
 
-<!-- ═══════════ DEVELOPER MODULES — Loaded Components ═══════════ -->
+<!-- ═══════════ DEVELOPER MODULES ═══════════ -->
 
 ```
 rahul@rahulos:~$ rahul-ai modules
 
 ╔══════════════════════════════════════════════════════════════╗
 ║                                                              ║
-║  MODULE               VERSION   STATUS    DESCRIPTION        ║
+║  REGISTERED RUNTIMES                                        ║
+║                                                              ║
+║  MODULE               VERSION   STATUS    SCOPE              ║
 ║  ───────────────────────────────────────────────────────     ║
 ║                                                              ║
-║  nextjs.dll           15.0.0    ● Loaded  Frontend runtime  ║
-║  python.dll           3.12.0    ● Loaded  Backend & ML      ║
-║  gemini.dll           2.5.0     ● Loaded  AI inference      ║
-║  vision.dll           4.9.0     ● Loaded  Computer vision   ║
-║  insightface.dll      0.7.3     ● Loaded  Face recognition  ║
-║  prompt-router.dll    1.2.0     ● Loaded  Model routing     ║
-║  tailwind.dll         3.4.0     ● Loaded  CSS engine        ║
-║  firebase.dll         11.0.0    ● Loaded  Backend services  ║
-║  cloudrun.dll         1.0.0     ● Loaded  GCP deployment    ║
-║  vercel.dll           35.0.0    ● Loaded  Edge delivery     ║
-║  supabase.dll         2.0.0     ● Loaded  Database + Auth   ║
-║  threejs.dll          0.170.0   ● Loaded  3D visualization  ║
+║  nextjs               15.0.0    ● loaded  Frontend           ║
+║  python               3.12.0    ● loaded  Backend / ML       ║
+║  gemini-sdk           2.5.0     ● loaded  AI inference       ║
+║  opencv               4.9.0     ● loaded  Computer vision    ║
+║  insightface          0.7.3     ● loaded  Face recognition   ║
+║  tailwindcss          3.4.0     ● loaded  Styling engine     ║
+║  firebase-sdk         11.0.0    ● loaded  Backend services   ║
+║  google-cloud-sdk     1.0.0     ● loaded  Cloud deployment   ║
+║  supabase             2.0.0     ● loaded  Database + Auth    ║
+║  three.js             0.170.0   ● loaded  3D visualization   ║
+║  typescript           5.6.0     ● loaded  Type system        ║
 ║                                                              ║
-║  12 modules loaded — all ● GREEN                             ║
+║  11 runtimes loaded — all ● GREEN                            ║
 ║                                                              ║
 ╚═══════════════════════════════════════════════════════════════╝
 
@@ -454,67 +300,104 @@ rahul@rahulos:~$ rahul-ai modules
 <br>
 <br>
 
-<!-- ═══════════ WHAT I BUILD — Clear Identity ═══════════ -->
+<!-- ═══════════ WHAT I BUILD ═══════════ -->
 
 ```
-rahul@rahulos:~$ rahul --help
+rahul@rahulos:~$ man rahul
+
+NAME
+     rahul — AI product builder and full-stack engineer
+
+SYNOPSIS
+     rahul [--build]  [--deploy]  [--collaborate]
+
+DESCRIPTION
+     Rahul builds AI products end to end.  He works across the
+     entire stack — from computer vision pipelines and face
+     recognition systems to LLM-powered web applications.
+
+     He specializes in multi-model AI architectures, cloud-native
+     full-stack development, and applying AI to civil engineering
+     problems.  His background in civil engineering gives him a
+     systems-thinking approach to software design.
+
+     He ships on Vercel and Google Cloud Run, uses Gemini and
+     InsightFace for AI workloads, and writes TypeScript, Python,
+     and React daily.
+
+AREAS OF WORK
+
+     Multi-model AI systems   Computer Vision / face recognition
+     LLM-powered products     Prompt engineering / routing
+     Cloud-native full-stack  Next.js / Firebase / Cloud Run
+     Civil engineering AI     Construction tech / automation
+     Developer tools          Type-safe frontends / design systems
+
+SEE ALSO
+     rahul.live(1)
+     github.com/rahulcvwebsitehosting(7)
+
+AUTHOR
+     Rahul Shyam
+     Chennai, India
+     B.E. Civil Engineering, ESEC
+
+```
+
+<br>
+<br>
+<br>
+
+<!-- ═══════════ SESSION LOG ═══════════ -->
+
+```
+rahul@rahulos:~$ cat /var/log/session
+
+[00:42:13] session: User rahul authenticated — environment loaded
+[00:42:14] router:  Gemini adapter connected — primary route ready
+[00:42:15] vision:  InsightFace pipeline initialized
+[00:42:16] storage: Firebase Firestore sync OK
+[00:42:16] deploy:  Cloud Run agent reporting healthy
+[00:42:17] deploy:  Vercel edge functions — 0 errors
+[00:42:18] system:  All 8 services running — session ready
+[00:42:20] kernel:  RahulOS 3.7.0 — AI operating mode
+
+```
+
+<br>
+<br>
+<br>
+
+<!-- ═══════════ ROADMAP ═══════════ -->
+
+```
+rahul@rahulos:~$ cat /home/rahul/roadmap/tracker.txt
 
 ╔══════════════════════════════════════════════════════════════╗
 ║                                                              ║
-║   NAME                                                       ║
-║        rahul — AI product builder & full-stack engineer      ║
+║   CURRENT : v3.7.0                                           ║
+║   NEXT    : v3.8.0 (Q1 2027)                                 ║
 ║                                                              ║
-║   SYNOPSIS                                                   ║
-║        rahul [--build] [--deploy] [--ai-engineer]            ║
+║   ── v3.7.0 — SHIPPED ─────────────────────────────────      ║
 ║                                                              ║
-║   DESCRIPTION                                                ║
-║        Rahul builds AI products end to end — from            ║
-║        computer vision pipelines to LLM-powered web apps.    ║
-║        Specializes in multi-model AI systems, face           ║
-║        recognition, and cloud-native full-stack.              ║
+║     LooksMax AI         Multi-model facial analysis          ║
+║     CivilVision AI      AI civil engineering helpbook        ║
+║     AutoBOM             AI bill-of-materials from drawings   ║
+║     StudySense          Study management platform            ║
+║     TypeArena           Competitive typing                   ║
+║     RahulOS v3.7        AI OS profile README                ║
 ║                                                              ║
-║        Background: Civil Engineering. AI since day one.      ║
+║   ── v3.8.0 — BUILDING ──────────────────────────────────    ║
 ║                                                              ║
-║   OPTIONS                                                    ║
+║     FallGuard           Fall detection — CV + sensors        ║
+║     Hostel Planner      Room allocation + RDBMS              ║
 ║                                                              ║
-║        --build <app>                                         ║
-║            Full-stack AI product from 0 to production.       ║
-║            Stack: Next.js + Python + Gemini + Firebase.      ║
+║   ── v4.0.0 — EXPLORING ─────────────────────────────────    ║
 ║                                                              ║
-║        --deploy <service>                                    ║
-║            Ship to Vercel (frontend) or GCP Cloud Run        ║
-║            (backend). CI/CD via GitHub Actions.              ║
+║     TunnelViz           3D tunnel construction viz           ║
+║     OSB ETA             OSB delivery prediction              ║
 ║                                                              ║
-║        --ai-engineer <problem>                               ║
-║            Computer vision, face recognition, LLM routing.   ║
-║            Multi-model pipelines: Gemini + InsightFace.      ║
-║                                                              ║
-║        --design <interface>                                  ║
-║            UI/UX with Tailwind CSS. Dark mode always.        ║
-║            Responsive across mobile, tablet, desktop.        ║
-║                                                              ║
-║        --collaborate <team>                                  ║
-║            Clear PR descriptions. Thoughtful reviews.        ║
-║            Async-first. Document decisions.                  ║
-║                                                              ║
-║   WHAT I BUILD                                               ║
-║                                                              ║
-║        • Multi-model AI systems                              ║
-║        • Computer Vision apps                                ║
-║        • Face recognition platforms                          ║
-║        • LLM-powered products                                ║
-║        • Cloud-native full-stack                             ║
-║        • Construction tech with AI                           ║
-║        • Developer tools                                     ║
-║                                                              ║
-║   SEE ALSO                                                   ║
-║        rahul.live(1)                                         ║
-║        github.com/rahulcvwebsitehosting                      ║
-║                                                              ║
-║   AUTHOR                                                     ║
-║        Rahul Shyam                                           ║
-║        Chennai, India                                        ║
-║        B.E. Civil Engineering @ ESEC                         ║
+║   NOTE: Building in public. Timelines are fluid.             ║
 ║                                                              ║
 ╚═══════════════════════════════════════════════════════════════╝
 
@@ -524,109 +407,23 @@ rahul@rahulos:~$ rahul --help
 <br>
 <br>
 
-<!-- ═══════════ SYSTEM LOG — Real-time journalctl ═══════════ -->
-
-```
-rahul@rahulos:~$ journalctl -f | head -20
-
-── Logs since boot ──────────────────────────────────────────
-
-[00:42:13] rahulos kernel: Session initialized — user: rahul
-[00:42:14] gemini-router: Connected successfully
-[00:42:14] vision-engine: Pipeline loaded — 3 models
-[00:42:15] insightface: Face database mounted — ready
-[00:42:15] inference: Engines warmed — latency nominal
-[00:42:16] cloud-run: Deployment status — green
-[00:42:16] firebase: Firestore connected — sync OK
-[00:42:16] vercel: Edge functions healthy — 0 errors
-[00:42:17] prompt-router: Fallback chain configured
-[00:42:17] looksmax-ai: Service running — PID 1267
-[00:42:18] civilvision: Hackathon module loaded
-[00:42:18] studysense: Firebase auth integrated
-[00:42:19] typearena: Competitive mode — active
-[00:42:20] RahulOS v3.6: All targets reached — ready
-[00:42:21] kernel: System ready — AI operating mode
-
-```
-
-<br>
-<br>
-<br>
-
-<!-- ═══════════ ROADMAP — Versioned ═══════════ -->
-
-```
-rahul@rahulos:~$ cat /home/rahul/roadmap/roadmap.txt
-
-╔═══════════════ RAHULOS ROADMAP ═════════════════════╗
-║                                                     ║
-║   CURRENT VERSION: v3.6.0  (LTS)                    ║
-║   NEXT RELEASE:    v3.7.0  (Q4 2026)                ║
-║                                                     ║
-║   ┌─────────────────────────────────────────────┐   ║
-║   │                                             │   ║
-║   │  v3.6.0 — CURRENT                          │   ║
-║   │  ─────────────────────────────             │   ║
-║   │  ✅ LooksMax AI — Gemini + InsightFace     │   ║
-║   │  ✅ CivilVision AI — Hackathon winner       │   ║
-║   │  ✅ AutoBOM — AI BOM from drawings          │   ║
-║   │  ✅ StudySense — Study management platform  │   ║
-║   │  ✅ TypeArena — Competitive typing app      │   ║
-║   │  ✅ RahulOS v3.6 — AI OS Profile README     │   ║
-║   │                                             │   ║
-║   │  v3.7.0 — NEXT                              │   ║
-║   │  ─────────────────────────────             │   ║
-║   │  ⬜ FallGuard — Fall detection AI system     │   ║
-║   │  ⬜ Hostel Planner — Room allocation + DB   │   ║
-║   │  ⬜ TunnelViz — 3D tunnel visualization     │   ║
-║   │  ⬜ OSB ETA — Delivery ETA prediction       │   ║
-║   │                                             │   ║
-║   │  v4.0.0 — HORIZON                           │   ║
-║   │  ─────────────────────────────             │   ║
-║   │  ⬜ Launch an AI SaaS product               │   ║
-║   │  ⬜ Ship a vision-first AI platform          │   ║
-║   │  ⬜ Build an open-source AI developer tool   │   ║
-║   │  ⬜ Speak at a tech conference on AI        │   ║
-║   │  ⬜ Mentor 10 students in AI + web dev      │   ║
-║   │                                             │   ║
-║   └─────────────────────────────────────────────┘   ║
-║                                                     ║
-║   NOTE: Roadmap is aspirational.                    ║
-║   Priority = quality over velocity.                 ║
-║                                                     ║
-╚══════════════════════════════════════════════════════╝
-
-```
-
-<br>
-<br>
-<br>
-
-<!-- ═══════════ CONTACT TERMINAL — Real Links ═══════════ -->
+<!-- ═══════════ CONTACT ═══════════ -->
 
 ```
 rahul@rahulos:~$ cat /home/rahul/contact.txt
 
 ┌──────────────────────────────────────────────────────────┐
 │                                                          │
-│   // RAHULOS CONTACT PROTOCOLS                           │
-│   // Reach out. Always open to builders.                 │
+│  [ Reach me ]                                            │
 │                                                          │
-│   ───────────────────────────────────────────────────    │
+│  HTTPS       rahulshyam-portfolio.vercel.app    ONLINE   │
+│  GIT         github.com/rahulcvwebsitehosting  ACTIVE    │
+│  LINKEDIN    linkedin.com/in/rahulshyamcivil   AVAILABLE │
+│  X           x.com/RahulShyamCV                IDLE      │
+│  THREADS     threads.net/@rahulcvjps           IDLE      │
 │                                                          │
-│   [PROTOCOL]  ENDPOINT                       STATUS      │
-│                                                          │
-│   HTTPS       rahulshyam-portfolio.vercel.app ONLINE     │
-│   GIT         github.com/rahulcvwebsitehosting ACTIVE    │
-│   LINKEDIN    linkedin.com/in/rahulshyamcivil  AVAILABLE  │
-│   X           x.com/RahulShyamCV              IDLE       │
-│   THREADS     threads.com/@rahulcvjps         IDLE       │
-│                                                          │
-│   ───────────────────────────────────────────────────    │
-│                                                          │
-│   Location    : Chennai, India                           │
-│   Education   : B.E. Civil Engineering @ ESEC            │
-│   Active hrs  : 0600–2300 IST (UTC+5:30)                 │
+│  Chennai, India · B.E. Civil Engineering @ ESEC         │
+│  Active hours: 0600–2300 IST                             │
 │                                                          │
 └──────────────────────────────────────────────────────────┘
 
@@ -644,19 +441,19 @@ logout
 
 ═══════════════════════════════════════════════════════════
 
-Broadcast message from system@rahulos (Thu Jul  9 2026):
+Broadcast message from rahul@rahulos (Thu Jul  9 2026):
 
 ┌──────────────────────────────────────────────────────────┐
 │                                                          │
 │   /etc/motd:                                             │
 │                                                          │
 │   "The system will now shut down.                         │
-│    All AI models have been persisted to memory.           │
+│    All AI models have been persisted to disk.             │
 │                                                          │
 │    Build things that matter.                              │
 │    Ship AI that solves real problems.                     │
 │                                                          │
-│    — RahulOS v3.6.0 AI LTS                                │
+│    — RahulOS v3.7.0 AI                                    │
 │                                                          │
 └──────────────────────────────────────────────────────────┘
 
@@ -671,16 +468,9 @@ Connection to github.com/rahulcvwebsitehosting closed.
 <br>
 
 ```
-                  _
-                 | |
-                 | |
-                _|_|_
-```
+System halted.
 
-<br>
-
-```
-                       [ shutdown complete ]
+[ power down complete ]
 ```
 
 <br>
@@ -690,8 +480,7 @@ Connection to github.com/rahulcvwebsitehosting closed.
 
 <!--
   ╔══════════════════════════════════════════════════════════════╗
-  ║  RahulOS v3.6.0 AI — Long Term Support                       ║
-  ║  AI Operating System. Powered by real products.              ║
+  ║  RahulOS v3.7.0 AI — Built with real products.              ║
   ║  github.com/rahulcvwebsitehosting                             ║
   ╚══════════════════════════════════════════════════════════════╝
 -->
