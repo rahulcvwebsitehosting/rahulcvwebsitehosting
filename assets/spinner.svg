@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="20" viewBox="0 0 80 20">
+  <text x="0" y="15" font-family="'Courier New', monospace" font-size="16" fill="#8B949E">
+    [....]
+    <animate attributeName="opacity" values="1;0;0;0;0;0;1" keyTimes="0;0.15;0.3;0.45;0.7;0.85;1" dur="1.2s" repeatCount="indefinite" />
+  </text>
+  <text x="0" y="15" font-family="'Courier New', monospace" font-size="16" fill="#8B949E">
+    [...*.]
+    <animate attributeName="opacity" values="0;1;0;0;0;0;0" keyTimes="0;0.15;0.3;0.45;0.7;0.85;1" dur="1.2s" repeatCount="indefinite" />
+  </text>
+  <text x="0" y="15" font-family="'Courier New', monospace" font-size="16" fill="#8B949E">
+    [..**.]
+    <animate attributeName="opacity" values="0;0;1;0;0;0;0" keyTimes="0;0.15;0.3;0.45;0.7;0.85;1" dur="1.2s" repeatCount="indefinite" />
+  </text>
+  <text x="0" y="15" font-family="'Courier New', monospace" font-size="16" fill="#8B949E">
+    [.***.]
+    <animate attributeName="opacity" values="0;0;0;1;0;0;0" keyTimes="0;0.15;0.3;0.45;0.7;0.85;1" dur="1.2s" repeatCount="indefinite" />
+  </text>
+  <text x="0" y="15" font-family="'Courier New', monospace" font-size="16" fill="#8B949E">
+    [****.]
+    <animate attributeName="opacity" values="0;0;0;0;1;0;0" keyTimes="0;0.15;0.3;0.45;0.7;0.85;1" dur="1.2s" repeatCount="indefinite" />
+  </text>
+</svg>
