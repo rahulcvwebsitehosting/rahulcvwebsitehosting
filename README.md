@@ -203,13 +203,11 @@ rahul@rahulos:~$ rahul-ai status
 ┌──────────────────────────────────────────────────────────┐
 │                                                          │
 │  Router        ONLINE     Gemini 2.5 Pro                 │
-│  Vision        READY      InsightFace pipeline           │
 │  Vision        READY      Inspection pipeline            │
 │  Embeddings    ACTIVE     Dense vector store             │
 │  Deployments   HEALTHY    Vercel · Cloud Run · Firebase  │
 │                                                          │
-│  Primary:    Gemini 2.5 Pro                              │
-│  Fallback:   Claude (for reliability)                    │
+│  Fallback:   Claude (on route failure)                   │
 │                                                          │
 └──────────────────────────────────────────────────────────┘
 
