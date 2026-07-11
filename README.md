@@ -159,12 +159,12 @@ drwx------  2 rahul rahul  4096 Jul  9 00:42 .config/
 rahul@rahulos:~$ tree projects/
 
 projects/
-├── LooksMax-AI/
-│   ├── backend/
+├── FabricScan-AI/
+│   ├── vision/
+│   ├── api/
 │   ├── frontend/
-│   ├── models/
 │   └── deploy/
-├── CivilVision-AI/
+├── CivilVisAi/
 │   ├── app/
 │   ├── model/
 │   └── research/
@@ -176,13 +176,17 @@ projects/
 │   ├── web/
 │   ├── api/
 │   └── infra/
-├── TypeArena/
-│   ├── client/
-│   ├── server/
-│   └── public/
+├── Civilog/
+│   ├── admin/
+│   ├── qr-scanner/
+│   └── api/
 ├── FallGuard/
 │   ├── detection/
 │   └── hardware/
+├── Sehatam/
+│   ├── symptom-checker/
+│   ├── api/
+│   └── deploy/
 └── Hostel-Planner/
     ├── backend/
     └── schema/
@@ -200,11 +204,12 @@ rahul@rahulos:~$ rahul-ai status
 │                                                          │
 │  Router        ONLINE     Gemini 2.5 Pro                 │
 │  Vision        READY      InsightFace pipeline           │
-│  Identity      READY      Face cache                     │
+│  Vision        READY      Inspection pipeline            │
 │  Embeddings    ACTIVE     Dense vector store             │
 │  Deployments   HEALTHY    Vercel · Cloud Run · Firebase  │
 │                                                          │
-│  Fallback chain: Gemini Pro → Claude → DeepSeek         │
+│  Primary:    Gemini 2.5 Pro                              │
+│  Fallback:   Claude (for reliability)                    │
 │                                                          │
 └──────────────────────────────────────────────────────────┘
 
@@ -217,14 +222,17 @@ rahul@rahulos:~$ rahul-ai status
 ```
 rahul@rahulos:~$ now
 
-LooksMax AI
-  Face memory service — encoding + comparison pipeline
+FabricScan AI
+  Gemini Vision — garment defect detection + BOM
 
 FallGuard
   Motion detection model — CV + sensor fusion
 
 AutoBOM
   OCR parsing improvements — construction drawings
+
+Sehatam
+  AI symptom checker — rural healthcare (Google SGC 2026)
 
 ```
 
@@ -259,7 +267,7 @@ rahul@rahulos:~$ gh repo list --limit 5
 rahulcvwebsitehosting/rahulcvwebsitehosting  RahulOS profile README
 
 rahul@rahulos:~$ git log --oneline -3
-• b3f2a1d Add face encoding pipeline to LooksMax AI
+• d1e2f3a Add Gemini Vision defect detection to FabricScan AI
 • c4e5d6f Update Gemini API handler in CivilVision AI
 • a7b8c9d Integrate Firebase auth in StudySense
 
@@ -284,12 +292,18 @@ DESCRIPTION
      full-stack web development, and AI applications
      for civil engineering.
 
+     Has hands-on site experience — tunnel and guide-
+     wall construction at Chennai Underground Metro
+     (Tata Projects), and BIM/Revit at Pinnacle Future
+     Build. Codes with the same intensity he brought
+     to construction sites.
+
 OPTIONS
      --build project    Build from concept to deployment.
      --deploy target    Ship to Vercel, Cloud Run, or Firebase.
 
 EXAMPLES
-     rahul --build looksmax-ai      Multi-model facial analysis
+     rahul --build fabricscan-ai    Gemini Vision defect detection + BOM
      rahul --deploy cloud-run       Backend to Cloud Run
 
 FILES
@@ -329,7 +343,7 @@ System requires manual intervention. Please proceed to nearest caf\u00e9.
 ```
 rahul@rahulos:~$ cat roadmap/tracker.txt
 
-Stable   v3.7.0    LooksMax AI · CivilVision AI · AutoBOM
+Stable   v3.7.0    FabricScan AI · CivilVision AI · AutoBOM
 Next     v3.8.0    FallGuard · Hostel Planner
 Research v4.0.0    TunnelViz · OSB ETA
 
