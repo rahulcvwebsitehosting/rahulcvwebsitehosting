@@ -54,6 +54,11 @@ RahulOS 3.7.0-ai (rahul-cv-01) │ tty1
 
 ```
 
+<p align="center">
+  <img src="assets/dark_mode.svg" alt="Rahul-OS profile card" height="280">
+  <img src="assets/rahul.jpg" alt="Rahul Shyam" height="280">
+</p>
+
 <br>
 
 <!-- ═══════════ LOGIN ═══════════ -->
