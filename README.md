@@ -44,7 +44,7 @@ RahulOS 3.7.0-ai (rahul-cv-01) │ tty1
 
 [  OK  ] Started gemini-adapter.service       — Multi-model routing
 [  OK  ] Started vision-pipeline.service       — Computer Vision
-[  OK  ] Started insightface-runtime.service   — Face Recognition
+[  OK  ] Started ml-inference.service          — AI Inference Engine
 [  OK  ] Started ollama-bridge.service         — Local LLM runtime
 [  OK  ] Started api-gateway.socket            — Next.js API routes
 [  OK  ] Started firebase-connector.service    — Firebase backend
